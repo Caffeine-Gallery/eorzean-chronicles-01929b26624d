@@ -54,19 +54,21 @@ section {
 }
 
 #job-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
-  list-style-type: none;
-  padding: 0;
 }
 
-#job-list li {
-  background-color: var(--secondary-color);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-weight: bold;
+.job-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
 }
 
 article {

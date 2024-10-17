@@ -8,9 +8,14 @@ export interface BlogPost {
   'content' : string,
   'timestamp' : bigint,
 }
+export interface Job {
+  'name' : string,
+  'role' : string,
+  'description' : string,
+}
 export interface _SERVICE {
   'createPost' : ActorMethod<[string, string], bigint>,
-  'getJobs' : ActorMethod<[], Array<string>>,
+  'getJobs' : ActorMethod<[], Array<Job>>,
   'getPosts' : ActorMethod<[], Array<BlogPost>>,
 }
 export declare const idlFactory: IDL.InterfaceFactory;

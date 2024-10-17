@@ -4,9 +4,14 @@ async function loadJobs() {
   const jobs = await backend.getJobs();
   const jobList = document.getElementById('job-list');
   jobs.forEach(job => {
-    const li = document.createElement('li');
-    li.textContent = job;
-    jobList.appendChild(li);
+    const jobCard = document.createElement('div');
+    jobCard.className = 'job-card';
+    jobCard.innerHTML = `
+      <h3>${job.name}</h3>
+      <p><strong>Role:</strong> ${job.role}</p>
+      <p>${job.description}</p>
+    `;
+    jobList.appendChild(jobCard);
   });
 }
 
