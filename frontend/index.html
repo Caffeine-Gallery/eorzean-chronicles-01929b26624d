@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Fantasy XIV Character Blog</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <h1>Final Fantasy XIV Character Blog</h1>
+        <p>Explore the realm of Eorzea through the eyes of its heroes</p>
+    </header>
+
+    <main>
+        <section id="jobs">
+            <h2>Available Jobs</h2>
+            <ul id="job-list"></ul>
+        </section>
+
+        <section id="blog-posts">
+            <h2>Latest Adventures</h2>
+            <div id="posts-container"></div>
+        </section>
+
+        <section id="new-post">
+            <h2>Share Your Adventure</h2>
+            <form id="post-form">
+                <input type="text" id="post-title" placeholder="Title" required>
+                <textarea id="post-content" placeholder="Tell your story..." required></textarea>
+                <button type="submit">Post</button>
+            </form>
+        </section>
+    </main>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
